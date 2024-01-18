@@ -1,15 +1,14 @@
-let greetings: string = 'Hello Juri!';
+function addTwo(num: number) {
+    return num +2
+}
 
 
+function getUpper(val: string) {
+    return val.toUpperCase()
+}
 
-console.log(greetings);
+let signUpUser = (name: string, email: string, isPaid: boolean) => {}
 
-// number
-
-let userId: number = 334466;
-
-// boolean
-
-let isLoggedIn: boolean = false;
-
-
+addTwo(5)
+getUpper('hi')
+signUpUser('Hils', 'hils@gvs.com', false)
