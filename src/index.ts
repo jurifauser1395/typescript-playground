@@ -1,24 +1,24 @@
-// specify the return type 
-
-function addTwo(num: number): number {
-    return num + 3
+const User = {
+    name: 'Hans',
+    email: 'hans@hans.com',
+    isActive: true
 }
 
+function createUser({name: string, isPaid: boolean}) {}
 
-// within parentheses type of the argument and after the second ":" return type
-const getHello = (s: string): string => {
-    return ' '
+createUser({name: 'Hans', isPaid: false})
+
+// same as usual, return type after the parentheses even if it is an object
+function createCourse():{name:string, price: number}{
+    return {name: 'hans', price: 4}
 }
 
-const heros = ['thor', 'spiderman', 'batman', 'ironman']
-
-// looping through the elements in the array: exchanging hero with the hero names
-heros.map((hero): string => {
-    return `hero is ${hero}`
-})
-
-function handleError(errmsg: string): never {
-    throw new Error(errmsg);
+type User = {
+    name: string;
+    email: string;
+    isActive: boolean
 }
 
-handleError('heeenlooo')
+function createUser01(user: User):User {
+    return User 
+}
