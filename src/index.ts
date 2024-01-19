@@ -1,14 +1,18 @@
-function addTwo(num: number) {
-    return num +2
+// specify the return type 
+
+function addTwo(num: number): number {
+    return num + 3
 }
 
 
-function getUpper(val: string) {
-    return val.toUpperCase()
+// within parentheses type of the argument and after the second ":" return type
+const getHello = (s: string): string => {
+    return ' '
 }
 
-let signUpUser = (name: string, email: string, isPaid: boolean) => {}
+const heros = ['thor', 'spiderman', 'batman', 'ironman']
 
-addTwo(5)
-getUpper('hi')
-signUpUser('Hils', 'hils@gvs.com', false)
+// looping through the elements in the array: exchanging hero with the hero names
+heros.map(hero => {
+    return `hero is ${hero}`
+})
