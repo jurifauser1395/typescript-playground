@@ -13,6 +13,12 @@ const getHello = (s: string): string => {
 const heros = ['thor', 'spiderman', 'batman', 'ironman']
 
 // looping through the elements in the array: exchanging hero with the hero names
-heros.map(hero => {
+heros.map((hero): string => {
     return `hero is ${hero}`
 })
+
+function handleError(errmsg: string): never {
+    throw new Error(errmsg);
+}
+
+handleError('heeenlooo')
