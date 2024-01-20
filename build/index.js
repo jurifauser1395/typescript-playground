@@ -1,9 +1,23 @@
 "use strict";
-function coordinates(pt) {
-    console.log('x coordinates: ' + pt.x);
-    console.log('y coordinates: ' + pt.y);
+let superHeros = [
+    ['1', '2', '3', '4', '5'],
+    ['a', 'b', 'c', 'd', 'e'],
+    ['!', '@', '#', '$', '%']
+];
+let cycles = (superHeros.length - 1);
+for (let i = 0; i <= cycles; i++) {
+    console.log(superHeros[i]);
 }
-coordinates({ x: 100, y: 40 });
-let userIdNumber = (idNumber, idBit) => idNumber + ' ' + idBit;
-let id01 = userIdNumber(23423, 'Donkey');
-console.log(id01);
+console.log('\n');
+for (let i = 0; i <= cycles; i++) {
+    console.log(superHeros[i][1]);
+}
+superHeros.push(['[', '(', '{', '<', '"']);
+let cycles01 = (superHeros.length - 1);
+console.log('\n');
+for (let i = 0; i <= cycles01; i++) {
+    console.log(superHeros[i]);
+}
+console.log('\n');
+let stringArray = (element) => console.log(element);
+superHeros.map(stringArray);

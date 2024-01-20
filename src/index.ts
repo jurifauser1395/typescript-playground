@@ -1,21 +1,33 @@
-// declare a type of type object
-type Point = {
-    x: number;
-    y: number;
+let superHeros: string[][] = [
+    ['1', '2', '3', '4', '5'],
+    ['a', 'b', 'c', 'd', 'e'],
+    ['!', '@', '#', '$', '%']
+] 
+
+let cycles = (superHeros.length - 1);
+
+for(let i = 0; i <= cycles; i++) {
+    console.log(superHeros[i])
 }
 
-function coordinates(pt: Point) {
-    console.log('x coordinates: ' + pt.x);
-    console.log('y coordinates: ' + pt.y);
+console.log('\n')
+
+for(let i = 0; i <= cycles; i++) {
+    console.log(superHeros[i][1])
 }
 
-coordinates({x: 100, y: 40});
- 
-// declare a type of type union
-type ID = string | number;
+superHeros.push(['[','(', '{', '<', '"'])
 
-let userIdNumber = (idNumber: ID, idBit: string): string => idNumber + ' ' + idBit
+let cycles01 = (superHeros.length - 1);
 
-let id01 = userIdNumber(23423, 'Donkey')
+console.log('\n')
 
-console.log(id01)
+for(let i = 0; i <= cycles01; i++) {
+    console.log(superHeros[i])
+}
+
+console.log('\n')
+
+let stringArray = (element: Array<string>) => console.log(element)
+
+superHeros.map(stringArray)
