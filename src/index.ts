@@ -1,24 +1,21 @@
-const User = {
-    name: 'Hans',
-    email: 'hans@hans.com',
-    isActive: true
+// declare a type of type object
+type Point = {
+    x: number;
+    y: number;
 }
 
-function createUser({name: string, isPaid: boolean}) {}
-
-createUser({name: 'Hans', isPaid: false})
-
-// same as usual, return type after the parentheses even if it is an object
-function createCourse():{name:string, price: number}{
-    return {name: 'hans', price: 4}
+function coordinates(pt: Point) {
+    console.log('x coordinates: ' + pt.x);
+    console.log('y coordinates: ' + pt.y);
 }
 
-type User = {
-    name: string;
-    email: string;
-    isActive: boolean
-}
+coordinates({x: 100, y: 40});
+ 
+// declare a type of type union
+type ID = string | number;
 
-function createUser01(user: User):User {
-    return User 
-}
+let userIdNumber = (idNumber: ID, idBit: string): string => idNumber + ' ' + idBit
+
+let id01 = userIdNumber(23423, 'Donkey')
+
+console.log(id01)

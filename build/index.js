@@ -1,22 +1,9 @@
 "use strict";
-// specify the return type 
-function addTwo(num) {
-    return num + 3;
+function coordinates(pt) {
+    console.log('x coordinates: ' + pt.x);
+    console.log('y coordinates: ' + pt.y);
 }
-// within parentheses type of the argument and after the second ":" return type
-const getHello = (s) => {
-    return ' ';
-};
-const heros = ['thor', 'spiderman', 'batman', 'ironman'];
-// looping through the elements in the array: exchanging hero with the hero names
-const heros01 = heros.map((hero) => {
-    return `hero is ${hero}`;
-});
-
-console.log(heros01)
-
-
-function handleError(errmsg) {
-    throw new Error(errmsg);
-}
-//handleError('heeenlooo');
+coordinates({ x: 100, y: 40 });
+let userIdNumber = (idNumber, idBit) => idNumber + ' ' + idBit;
+let id01 = userIdNumber(23423, 'Donkey');
+console.log(id01);
