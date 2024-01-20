@@ -19,5 +19,11 @@ for (let i = 0; i <= cycles01; i++) {
     console.log(superHeros[i]);
 }
 console.log('\n');
-let stringArray = (element) => console.log(element);
+let stringArray = (element) => console.log(`This is my array: ${element}`);
 superHeros.map(stringArray);
+function getDbId(id) {
+    if (typeof id === 'number') {
+        console.log(`Nice Id: ${id}`);
+    }
+}
+getDbId(80);

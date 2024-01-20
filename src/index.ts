@@ -28,6 +28,16 @@ for(let i = 0; i <= cycles01; i++) {
 
 console.log('\n')
 
-let stringArray = (element: Array<string>) => console.log(element)
-
+let stringArray = (element: Array<string>) => console.log(`This is my array: ${element}`)
+ 
 superHeros.map(stringArray)
+
+function getDbId(id: number | string) {
+    if ( typeof id === 'string') {
+        console.log(`Nice Id: ${id}` + id.toUpperCase())
+    }
+}
+
+getDbId('his')
+
+const data: (string | number)[] = [1, 2, 3, 4, 5, '1', '2', '3', '4', '5' ]
