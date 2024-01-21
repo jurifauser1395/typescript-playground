@@ -1,43 +1,7 @@
-let superHeros: string[][] = [
-    ['1', '2', '3', '4', '5'],
-    ['a', 'b', 'c', 'd', 'e'],
-    ['!', '@', '#', '$', '%']
-] 
+// const user: (string | number)[] = [1 , 'hc']
 
-let cycles = (superHeros.length - 1);
+let tUser: [string, number, boolean]
 
-for(let i = 0; i <= cycles; i++) {
-    console.log(superHeros[i])
-}
+tUser = ['hc', 1342, true]
 
-console.log('\n')
-
-for(let i = 0; i <= cycles; i++) {
-    console.log(superHeros[i][1])
-}
-
-superHeros.push(['[','(', '{', '<', '"'])
-
-let cycles01 = (superHeros.length - 1);
-
-console.log('\n')
-
-for(let i = 0; i <= cycles01; i++) {
-    console.log(superHeros[i])
-}
-
-console.log('\n')
-
-let stringArray = (element: Array<string>) => console.log(`This is my array: ${element}`)
- 
-superHeros.map(stringArray)
-
-function getDbId(id: number | string) {
-    if ( typeof id === 'string') {
-        console.log(`Nice Id: ${id}` + id.toUpperCase())
-    }
-}
-
-getDbId('his')
-
-const data: (string | number)[] = [1, 2, 3, 4, 5, '1', '2', '3', '4', '5' ]
+let rgb: [number, number, number] = [2, 2, 4]
