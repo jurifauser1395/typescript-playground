@@ -1,7 +1,12 @@
-// const user: (string | number)[] = [1 , 'hc']
+// Enums 
 
-let tUser: [string, number, boolean]
+enum SeatChoice {
+    AISLE = 'v',
+    MIDDLE = 3,
+    WINDOW,
+    FOURTH
+}
 
-tUser = ['hc', 1342, true]
+const hcSeat = SeatChoice.AISLE
 
-let rgb: [number, number, number] = [2, 2, 4]
+console.log(hcSeat)
