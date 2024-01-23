@@ -1,10 +1,9 @@
 "use strict";
 class Bird {
+    // professional why of declaring a constructor in typescript
     constructor(color, canFly) {
-        this.canSwim = 'yes';
         this.color = color;
         this.canFly = canFly;
     }
 }
 let duck = new Bird('brown', true);
-let swimDuck = duck.canSwim = ' ';

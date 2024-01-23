@@ -1,14 +1,11 @@
 class Bird {
-    color: string;
-    canFly: boolean;
-    canSwim: string = 'yes'
-
-    constructor(color: string, canFly: boolean) {
-        this.color = color;
-        this.canFly = canFly;
+    // professional why of declaring a constructor in typescript
+    constructor(
+        public color: string,
+        public canFly: boolean
+        ){ 
     }
 }
 
 let duck = new Bird('brown', true)
 
-let swimDuck = duck.canSwim = ' '
