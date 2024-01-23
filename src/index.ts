@@ -1,18 +1,14 @@
-interface Bike {
-    shape: string,
-    color: string,
-    price: number,
-    weight: number
+class Bird {
+    color: string;
+    canFly: boolean;
+    canSwim: string = 'yes'
+
+    constructor(color: string, canFly: boolean) {
+        this.color = color;
+        this.canFly = canFly;
+    }
 }
 
-function newBike (bike: Bike) {
-    console.log(' Checkout my new bike, it is ' + bike.color + ' and costs ' + bike.price + '$ and is ' + bike.shape + '!')
-}
+let duck = new Bird('brown', true)
 
-let myNewBike: Bike = {
-    shape: 'nice',
-    color: 'black',
-    price: 453,
-    weight: 34
-}
-newBike(myNewBike)
+let swimDuck = duck.canSwim = ' '
