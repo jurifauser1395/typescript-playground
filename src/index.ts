@@ -1,10 +1,10 @@
-class Bird {
+class Animal {
 
     private weight = 1
 
     // professional why of declaring a constructor in typescript
     constructor(
-        public color: string,
+        protected color: string,
         public canFly: boolean
         ){ 
     }
@@ -17,7 +17,13 @@ class Bird {
         this.weight = birdWeight;
     }
 }
+ 
+let duck = new Animal('brown', true)
 
+class Bird extends Animal {
+    isMammal: boolean = false;
 
-let duck = new Bird('brown', true)
-
+    changeColor() {
+        this.color = 'blue';
+    }
+}

@@ -1,5 +1,5 @@
 "use strict";
-class Bird {
+class Animal {
     // professional why of declaring a constructor in typescript
     constructor(color, canFly) {
         this.color = color;
@@ -13,4 +13,13 @@ class Bird {
         this.weight = birdWeight;
     }
 }
-let duck = new Bird('brown', true);
+let duck = new Animal('brown', true);
+class Bird extends Animal {
+    constructor() {
+        super(...arguments);
+        this.isMammal = false;
+    }
+    changeColor() {
+        this.color = 'blue';
+    }
+}
