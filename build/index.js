@@ -39,3 +39,17 @@ class Sellable {
         this.card.push(product);
     }
 }
+function detectType(val) {
+    if (typeof val === 'string') {
+        return val.toLowerCase();
+    }
+    return val + 43;
+}
+// null is a datatype! be careful!
+function provideID(id) {
+    if (!id) {
+        console.log('Please provide id!');
+        return;
+    }
+    id.toLowerCase();
+}
