@@ -16,3 +16,11 @@ function identityFour(val) {
     return val;
 }
 identityFour({ brand: 'sr', type: 4 });
+function getSearchProducts(productId) {
+    return productId[3];
+}
+const getMoreSearchProducts = (productsID) => {
+    // do some database operations 
+    const myIndex = 4;
+    return productsID[myIndex];
+};

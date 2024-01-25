@@ -29,3 +29,13 @@ interface Bootle{
 
 identityFour<Bootle>({brand: 'sr', type: 4})
 
+function getSearchProducts<T,>(productId: T[]): T{
+    return productId[3]
+}
+
+
+const getMoreSearchProducts = <T,>(productsID: T[]): T => {
+    // do some database operations 
+    const myIndex = 4
+    return productsID [myIndex]
+}
