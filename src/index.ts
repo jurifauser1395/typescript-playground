@@ -93,3 +93,18 @@ function provideID(id: string | null) {
     }
     id.toLowerCase()
 }
+
+let numbers = [3, 43, 34, 435, 43, 1]
+
+function loopTrough <T> (n: T[]) {
+    
+    let l: number = (n.length - 1)
+    if(Array.isArray(n)) {
+    
+        for (let index of n) {
+            console.log('This is my number ' + index)
+        }
+    }
+} 
+
+loopTrough(numbers)

@@ -53,3 +53,13 @@ function provideID(id) {
     }
     id.toLowerCase();
 }
+let numbers = [3, 43, 34, 435, 43, 1];
+function loopTrough(n) {
+    let l = (n.length - 1);
+    if (Array.isArray(n)) {
+        for (let index of n) {
+            console.log('This is my number ' + index);
+        }
+    }
+}
+loopTrough(numbers);
