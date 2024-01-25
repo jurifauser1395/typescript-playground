@@ -1,29 +1,31 @@
-class Animal {
+// generics in typescript
 
-    private weight = 1
+const score: Array<number> = []
 
-    // professional why of declaring a constructor in typescript
-    constructor(
-        protected color: string,
-        public canFly: boolean
-        ){ 
-    }
-    
-    get getWeight(): number {
-        return this.weight
-    }
+const names: Array<string> = []
 
-    set setWeight(birdWeight: number) {
-        this.weight = birdWeight;
-    }
+function identityOne(val: boolean | number): boolean | number{
+    return val
 }
- 
-let duck = new Animal('brown', true)
 
-class Bird extends Animal {
-    isMammal: boolean = false;
-
-    changeColor() {
-        this.color = 'blue';
-    }
+function identityTow(val: any): any{
+    return val
 }
+
+function identityThree<Type>(val: Type): Type{
+    return val
+}
+
+// identityThree('3')
+
+function identityFour<T>(val: T): T {
+    return val
+}
+
+interface Bootle{
+    brand: string,
+    type: number
+}
+
+identityFour<Bootle>({brand: 'sr', type: 4})
+
