@@ -55,3 +55,24 @@ function anotherFunction<T, U extends Database>(valOne: T, valTwo: U): object {
 }
 
 anotherFunction(4, {connection: 'fv', username: 'v', password: 'vre'})
+
+
+interface Quiz{
+    name: string,
+    type: string
+}
+
+interface Course {
+    name: string,
+    author: string,
+    subject: string
+}
+
+
+class Sellable <T> {
+    public card: T[] = []
+
+    addToCard(product: T) {
+        this.card.push(product)
+    }
+}

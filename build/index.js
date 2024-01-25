@@ -31,3 +31,11 @@ function anotherFunction(valOne, valTwo) {
     };
 }
 anotherFunction(4, { connection: 'fv', username: 'v', password: 'vre' });
+class Sellable {
+    constructor() {
+        this.card = [];
+    }
+    addToCard(product) {
+        this.card.push(product);
+    }
+}
