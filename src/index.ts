@@ -39,3 +39,19 @@ const getMoreSearchProducts = <T,>(productsID: T[]): T => {
     const myIndex = 4
     return productsID [myIndex]
 }
+
+
+interface Database {
+    connection: string,
+    username: string,
+    password: string
+}
+
+function anotherFunction<T, U extends Database>(valOne: T, valTwo: U): object {
+    return{
+        valOne,
+        valTwo
+    }
+}
+
+anotherFunction(4, {connection: 'fv', username: 'v', password: 'vre'})

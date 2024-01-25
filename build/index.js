@@ -24,3 +24,10 @@ const getMoreSearchProducts = (productsID) => {
     const myIndex = 4;
     return productsID[myIndex];
 };
+function anotherFunction(valOne, valTwo) {
+    return {
+        valOne,
+        valTwo
+    };
+}
+anotherFunction(4, { connection: 'fv', username: 'v', password: 'vre' });
