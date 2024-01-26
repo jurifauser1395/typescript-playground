@@ -24,7 +24,26 @@ function getFood(pet) {
         return 'fish food';
     }
     else {
-        pet.fly();
+        pet.fly;
         return 'bird food';
+    }
+}
+function getTrueShape(shape) {
+    if (shape.kind === 'circle') {
+        return Math.PI * shape.radius ** 2;
+    }
+    // return shape.side * shape.side
+}
+function getArea(shape) {
+    switch (shape.kind) {
+        case 'circle':
+            return Math.PI * shape.radius ** 2;
+        case 'square':
+            return shape.side * shape.side;
+        case 'rectangle':
+            return shape.width * shape.length;
+        default:
+            const _defaultforshape = shape;
+            return _defaultforshape;
     }
 }
