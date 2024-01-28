@@ -1,53 +1,42 @@
 "use strict";
-// The "in" keyword, very important 
-function isAdmin(account) {
-    if ('isAdmin' in account) {
-        return account.isAdmin;
-    }
-}
-// instanceof keyword 
-function logValue(x) {
-    if (x instanceof Date) {
-        console.log(x.toUTCString());
-    }
-    else {
-        console.log(x.toUpperCase());
-    }
-}
-// as keyword for typecasting 
-function isFish(pet) {
-    return pet.swim !== undefined;
-}
-function getFood(pet) {
-    if (isFish(pet)) {
-        pet.swim();
-        return 'fish food';
-    }
-    else {
-        pet.fly;
-        return 'bird food';
-    }
-}
-function getTrueShape(shape) {
-    if (shape.kind === 'circle') {
-        return Math.PI * Math.pow(shape.radius, 2);
-    }
-    // return shape.side * shape.side
-}
-function getArea(shape) {
-    switch (shape.kind) {
-        case 'circle':
-            return Math.PI * Math.pow(shape.radius, 2);
-        case 'square':
-            return shape.side * shape.side;
-        case 'rectangle':
-            return shape.width * shape.length;
-        default:
-            var _defaultforshape = shape;
-            return _defaultforshape;
-    }
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+function loggedMethod(target, propertyKey, descriptor) {
+    var originalMethod = descriptor.value;
+    descriptor.value = function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        console.log("LOG: Entering method.");
+        var result = originalMethod.apply(this, args);
+        console.log("LOG: Exiting method.");
+        return result;
+    };
+    return descriptor;
 }
 // Decorators
-function getAge() {
-    return 'hi';
-}
+var Person = /** @class */ (function () {
+    function Person(name) {
+        this.name = name;
+    }
+    Person.prototype.greet = function () {
+        console.log("Hello, my name is ".concat(this.name, "."));
+    };
+    __decorate([
+        loggedMethod,
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], Person.prototype, "greet", null);
+    return Person;
+}());
+var p = new Person("Ron");
+p.greet();
