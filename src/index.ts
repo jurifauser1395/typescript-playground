@@ -91,7 +91,7 @@ function getArea(shape: Shape) {
 
 // Decorators
 
- @log
+
 function getAge(): string  {
     return 'hi'
 }
